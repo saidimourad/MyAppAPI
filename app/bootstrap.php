@@ -17,7 +17,7 @@ if ($env === 'dev') {
         $whoops = new Run();
         $whoops->pushHandler(new PrettyPageHandler());
         $whoops->register();
-    } elseif ($env === 'prod') {
+     } elseif ($env === 'prod') {
         // Environnement de production : désactiver l'affichage des erreurs et les enregistrer dans un fichier de log
         error_reporting(0);  // Désactive l'affichage des erreurs
         ini_set('log_errors', 1);  // Active la journalisation des erreurs
