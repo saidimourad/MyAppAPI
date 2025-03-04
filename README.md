@@ -74,40 +74,44 @@ Chaque bibliothèque a été choisie pour sa simplicité, sa performance ou sa c
 
 ## Structure du Projet
 
-/MyAppAPI
-│
-├── /app
-│   ├── /Controllers
-│   │   ├── AuthController.php
-│   │   ├── UuidController.php
-│   │   └── ProtectedController.php
-│   ├── /Middleware
-│   │   ├── AuthMiddleware.php
-│   │   └── LoggingMiddleware.php
-│   ├── /Services
-│   │   └── UuidService.php
-│   ├── /Validation
-│   │   └── LoginValidation.php
-│   └── bootstrap.php
-│
-├── /config
-│   └── routes.php
-│
-├── /public
-│   └── index.php
-│
-├── /vendor
-│
-├── /var
-│   └── /cache
-│
-├── .env
-├── .env.example
-├── Dockerfile
-├── docker-compose.yml
-├── composer.json
-├── composer.lock
-└── README.md
+
+### Description des Répertoires et Fichiers
+
+- **/app** : Contient le code source de l'application.
+  - **/Container** : Contient le conteneur de services.
+    - `ServiceContainer.php` : Configuration des services de l'application.
+  - **/Controllers** : Contient les contrôleurs de l'application.
+    - `AuthController.php` : Gère l'authentification des utilisateurs.
+    - `UuidController.php` : Gère la génération d'UUID.
+    - `ProtectedController.php` : Contrôleur protégé par authentification.
+  - **/Middleware** : Contient les middlewares de l'application.
+    - `AuthMiddleware.php` : Middleware pour l'authentification.
+    - `LoggingMiddleware.php` : Middleware pour le logging des requêtes.
+  - **/Services** : Contient les services de l'application.
+    - `UuidService.php` : Service pour la génération d'UUID.
+  - **/Validation** : Contient les règles de validation.
+    - `LoginValidation.php` : Validation des données de connexion.
+  - `bootstrap.php` : Fichier d'amorçage de l'application.
+
+- **/config** : Contient les fichiers de configuration.
+  - `routes.php` : Définition des routes de l'application.
+
+- **/public** : Contient les fichiers accessibles publiquement.
+  - `index.php` : Point d'entrée de l'application.
+
+- **/vendor** : Contient les dépendances du projet (généré par Composer).
+
+- **.env** : Fichier de configuration des variables d'environnement.
+
+- **.env.example** : Exemple de fichier de configuration des variables d'environnement.
+
+- **Dockerfile** : Fichier de configuration pour Docker.
+
+- **docker-compose.yml** : Fichier de configuration pour Docker Compose.
+
+- **composer.json** : Fichier de configuration des dépendances PHP.
+
+- **composer.lock** : Fichier verrouillant les versions des dépendances.
 
 ### Description des Dossiers
 
